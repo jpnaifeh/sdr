@@ -1,0 +1,123 @@
+<playlist version="4">
+  <alias group="" list="Tulsa" iconName="Dispatcher" color="-16777216" name="Dispatcher">
+    <id type="radioRange" protocol="APCO25" min="20" max="30"/>
+  </alias>
+  <alias group="Police" list="Tulsa" iconName="Police" color="-16750849" name="TPD Mingo Valley">
+    <id type="record"/>
+    <id type="priority" priority="1"/>
+    <id type="talkgroup" protocol="APCO25" value="1921"/>
+    <id type="talkgroup" protocol="APCO25" value="713"/>
+    <id type="talkgroup" protocol="APCO25" value="715"/>
+  </alias>
+  <alias group="Police" list="Tulsa" iconName="Police" color="-16750849" name="TPD Riverside">
+    <id type="record"/>
+    <id type="priority" priority="1"/>
+    <id type="talkgroup" protocol="APCO25" value="1939"/>
+    <id type="talkgroup" protocol="APCO25" value="719"/>
+    <id type="talkgroup" protocol="APCO25" value="721"/>
+  </alias>
+  <alias group="Police" list="Tulsa" iconName="Police" color="-16750849" name="TPD Gilcrease">
+    <id type="record"/>
+    <id type="priority" priority="1"/>
+    <id type="talkgroup" protocol="APCO25" value="1953"/>
+    <id type="talkgroup" protocol="APCO25" value="707"/>
+    <id type="talkgroup" protocol="APCO25" value="709"/>
+  </alias>
+  <alias group="Fire" list="Tulsa" iconName="Fire Truck" color="-52429" name="TFD Dispatch">
+    <id type="record"/>
+    <id type="priority" priority="1"/>
+    <id type="talkgroup" protocol="APCO25" value="2241"/>
+  </alias>
+  <alias group="Fire" list="Tulsa" iconName="Fire Truck" color="-52429" name="TFD Non-Emergency">
+    <id type="talkgroup" protocol="APCO25" value="2243"/>
+  </alias>
+  <alias group="Fire" list="Tulsa" iconName="Fire Truck" color="-52429" name="TFD Tactical">
+    <id type="talkgroup" protocol="APCO25" value="2245"/>
+    <id type="talkgroup" protocol="APCO25" value="2247"/>
+    <id type="talkgroup" protocol="APCO25" value="2249"/>
+    <id type="talkgroup" protocol="APCO25" value="2251"/>
+    <id type="talkgroup" protocol="APCO25" value="2253"/>
+  </alias>
+  <alias group="Airport" list="Tulsa" iconName="Police" color="-16711936" name="Airport Police">
+    <id type="talkgroup" protocol="APCO25" value="2219"/>
+  </alias>
+  <alias group="Airport" list="Tulsa" iconName="Fire Truck" color="-16711936" name="Airport Fire">
+    <id type="talkgroup" protocol="APCO25" value="2221"/>
+    <id type="talkgroup" protocol="APCO25" value="2257"/>
+  </alias>
+  <alias group="Airport" list="Tulsa" iconName="Transport Bus" color="-16711936" name="Airport Traffic">
+    <id type="talkgroup" protocol="APCO25" value="1981"/>
+  </alias>
+  <alias group="Airport" list="Tulsa" iconName="Airplane" color="-16711936" name="Airport Authority">
+    <id type="talkgroup" protocol="APCO25" value="2209"/>
+    <id type="talkgroup" protocol="APCO25" value="2211"/>
+    <id type="talkgroup" protocol="APCO25" value="2213"/>
+    <id type="talkgroup" protocol="APCO25" value="2215"/>
+    <id type="talkgroup" protocol="APCO25" value="2217"/>
+  </alias>
+  <alias list="Tulsa" iconName="Ambulance" color="0" name="EMSA &amp; Emergency Rooms">
+    <id type="talkgroupRange" protocol="APCO25" min="775" max="797"/>
+    <id type="talkgroup" protocol="APCO25" value="1893"/>
+  </alias>
+  <alias group="Sheriff" list="Tulsa" iconName="Police" color="-16770432" name="TCSO Dispatch">
+    <id type="talkgroup" protocol="APCO25" value="2561"/>
+  </alias>
+  <alias group="Sheriff" list="Tulsa" iconName="No Icon" color="-16770432" name="Courthouse">
+    <id type="talkgroup" protocol="APCO25" value="2117"/>
+    <id type="talkgroup" protocol="APCO25" value="2119"/>
+  </alias>
+  <alias group="Sheriff" list="Tulsa" iconName="Police" color="-16770432" name="TCSO Service">
+    <id type="talkgroup" protocol="APCO25" value="2563"/>
+  </alias>
+  <alias group="Sheriff" list="Tulsa" iconName="Police" color="-16770432" name="TCSO Tactical">
+    <id type="talkgroup" protocol="APCO25" value="2115"/>
+    <id type="talkgroup" protocol="APCO25" value="1331"/>
+    <id type="talkgroup" protocol="APCO25" value="1333"/>
+  </alias>
+  <alias group="Sheriff" list="Tulsa" iconName="No Icon" color="-16770432" name="Jail">
+    <id type="talkgroupRange" protocol="APCO25" min="1639" max="1645"/>
+  </alias>
+  <alias group="City Services" list="Tulsa" iconName="No Icon" color="-65281" name="Tulsa Health Department">
+    <id type="talkgroupRange" protocol="APCO25" min="2121" max="2125"/>
+  </alias>
+  <alias group="City Services" list="Tulsa" iconName="Transport Bus" color="-65281" name="Tulsa Transit">
+    <id type="talkgroupRange" protocol="APCO25" min="2273" max="2277"/>
+  </alias>
+  <alias group="Fire" list="Tulsa" iconName="CWID" color="-52429" name="TFD KNOX Boxes">
+    <id type="record"/>
+    <id type="talkgroup" protocol="APCO25" value="2259"/>
+    <action type="beepAction" interval="ONCE" period="5"/>
+  </alias>
+  <channel system="OKWIN" site="061" enabled="true" order="1" name="Tulsa">
+    <alias_list_name>Tulsa</alias_list_name>
+    <aux_decode_configuration/>
+    <decode_configuration type="decodeConfigP25Phase1" traffic_channel_pool_size="25" modulation="C4FM" ignore_data_calls="false"/>
+    <event_log_configuration/>
+    <record_configuration/>
+    <source_configuration type="sourceConfigTunerMultipleFrequency" frequency_rotation_delay="800" source_type="TUNER_MULTIPLE_FREQUENCIES">
+      <frequency>857937500</frequency>
+      <frequency>856112500</frequency>
+      <frequency>854337500</frequency>
+      <frequency>854987500</frequency>
+      <frequency>855212500</frequency>
+      <frequency>855237500</frequency>
+      <frequency>855462500</frequency>
+      <frequency>855712500</frequency>
+      <frequency>855737500</frequency>
+      <frequency>856087500</frequency>
+      <frequency>856462500</frequency>
+      <frequency>856987500</frequency>
+      <frequency>857462500</frequency>
+      <frequency>857962500</frequency>
+      <frequency>857987500</frequency>
+      <frequency>858462500</frequency>
+      <frequency>858737500</frequency>
+      <frequency>858962500</frequency>
+      <frequency>858987500</frequency>
+      <frequency>859462500</frequency>
+      <frequency>859737500</frequency>
+      <frequency>859762500</frequency>
+      <frequency>859987500</frequency>
+    </source_configuration>
+  </channel>
+</playlist>
